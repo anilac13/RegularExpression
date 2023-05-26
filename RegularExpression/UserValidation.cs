@@ -22,5 +22,17 @@ namespace RegularExpression
                 Console.WriteLine("Invalid first name");
             }
         }
+        public void ValidateLastName(string lastName)
+        {
+            Regex obj = new Regex(NAME);
+            if (obj.IsMatch(lastName))
+            {
+                Console.WriteLine("Valid last name");
+            }
+            else
+            {
+                Console.WriteLine("Invalid last name");
+            }
+        }
     }
 }
