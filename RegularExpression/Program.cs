@@ -9,7 +9,7 @@ namespace RegularExpression
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose option to perform \n1.Validate First name \n2.Validate Last name \n3.Exit");
+                Console.WriteLine("\nChoose option to perform \n1.Validate First name \n2.Validate Last name \n3.Validate E-Mail \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,6 +24,11 @@ namespace RegularExpression
                         validation.ValidateFirstName(lastName);
                         break;
                     case 3:
+                        Console.WriteLine("Enter E-Mail");
+                        string email = Console.ReadLine();
+                        validation.ValidateEmail(email);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
