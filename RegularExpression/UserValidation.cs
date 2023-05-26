@@ -16,61 +16,96 @@ namespace RegularExpression
         public void ValidateFirstName(string firstName)
         {
             Regex obj = new Regex(NAME);
-            if (obj.IsMatch(firstName))
+            try
             {
-                Console.WriteLine("Valid first name");
+                if (obj.IsMatch(firstName))
+                {
+                    Console.WriteLine("Valid first name");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid first name");
+                }
             }
-            else
+            catch(Exception)
             {
-                Console.WriteLine("Invalid first name");
+                throw;
             }
         }
         public void ValidateLastName(string lastName)
         {
             Regex obj = new Regex(NAME);
-            if (obj.IsMatch(lastName))
+            try
             {
-                Console.WriteLine("Valid last name");
+                if (obj.IsMatch(lastName))
+                {
+                    Console.WriteLine("Valid last name");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid last name");
+                }
             }
-            else
+            catch(Exception)
             {
-                Console.WriteLine("Invalid last name");
+                throw;
             }
         }
         public void ValidateEmail(string email)
         {
             Regex obj = new Regex(EMAIL);
-            if (obj.IsMatch(email))
+            try
             {
-                Console.WriteLine("Valid E-Mail");
+                if (obj.IsMatch(email))
+                {
+                    Console.WriteLine("Valid E-Mail");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid E-Mail");
+                }
             }
-            else
+            catch(Exception)
             {
-                Console.WriteLine("Invalid E-Mail");
+                throw;
             }
         }
         public void ValidatePhoneNumber(string number)
         {
             Regex obj = new Regex(NUMBER);
-            if (obj.IsMatch(number))
+            try
             {
-                Console.WriteLine("Valid Phone number");
+                if (obj.IsMatch(number))
+                {
+                    Console.WriteLine("Valid Phone number");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Phone number");
+                }
             }
-            else
+            catch (Exception)
             {
-                Console.WriteLine("Invalid Phone number");
+                throw;
             }
         }
         public void ValidatePassword(string password)
         {
             Regex obj = new Regex(PASSWORD);
-            if (obj.IsMatch(password))
+            try
             {
-                Console.WriteLine("Valid Password");
+                if (obj.IsMatch(password))
+                {
+                    Console.WriteLine("Valid Password");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Password");
+                }
             }
-            else
+            catch (Exception)
             {
-                Console.WriteLine("Invalid Password");
+                throw;
             }
         }
         public void ValidateAllMails()
@@ -80,13 +115,20 @@ namespace RegularExpression
             foreach (string email in emails)
             {
                 Regex obj = new Regex (EMAIL);
-                if (obj.IsMatch(email))
+                try
                 {
-                    Console.WriteLine("Valid E-Mail");
+                    if (obj.IsMatch(email))
+                    {
+                        Console.WriteLine("Valid E-Mail");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid E-Mail");
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    Console.WriteLine("Invalid E-Mail");
+                    throw;
                 }
             }
         }
