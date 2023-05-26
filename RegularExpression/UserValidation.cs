@@ -12,6 +12,7 @@ namespace RegularExpression
         public const string NAME = @"^[A-Z][a-z]{2,}$";
         public const string EMAIL = @"^[a-zA-z0-9.+-]+[@]+[a-zA-z0-9]+[.]+[a-zA-z0-9.]{2,}$";
         public const string NUMBER = @"^[91 ]+[6-9][0-9]{9}$";
+        public const string PASSWORD = @"^[a-z]{8,}$";
         public void ValidateFirstName(string firstName)
         {
             Regex obj = new Regex(NAME);
@@ -58,6 +59,18 @@ namespace RegularExpression
             else
             {
                 Console.WriteLine("Invalid Phone number");
+            }
+        }
+        public void ValidatePassword(string password)
+        {
+            Regex obj = new Regex(PASSWORD);
+            if (obj.IsMatch(password))
+            {
+                Console.WriteLine("Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Password");
             }
         }
     }
