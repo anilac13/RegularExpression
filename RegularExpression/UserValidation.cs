@@ -12,7 +12,7 @@ namespace RegularExpression
         public const string NAME = @"^[A-Z][a-z]{2,}$";
         public const string EMAIL = @"^[a-zA-z0-9.+-]+[@]+[a-zA-z0-9]+[.]+[a-zA-z0-9.]{2,}$";
         public const string NUMBER = @"^[91 ]+[6-9][0-9]{9}$";
-        public const string PASSWORD = @"^[a-z]{8,}$";
+        public const string PASSWORD = @"^[A-Z][a-zA-Z]{7,}$";
         public void ValidateFirstName(string firstName)
         {
             Regex obj = new Regex(NAME);
